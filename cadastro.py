@@ -22,3 +22,4 @@ def main(page: ft.Page):
 
     page.add(nome_input, email_input, senha_input, cadastrar_button)
     
+ft.run(main)
