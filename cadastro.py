@@ -12,6 +12,7 @@ def main(page: ft.Page):
             ft.IconButton(ft.Icons.MORE_VERT),
         ],
     )
+    
 
     cpf = ft.TextField(label="CPF", width=300)
     telefone = ft.TextField(label="Telefone", width=300)
