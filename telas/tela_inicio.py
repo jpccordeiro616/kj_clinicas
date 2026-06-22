@@ -14,17 +14,17 @@ def tela_inicio(page: ft.Page):
     ,
     ft.ElevatedButton(
         "Pacientes",
-        on_click=lambda _: tela_pacientes(page)
+        on_click=lambda _: tela_pacientes(page, tela_inicio)
     ),
     ft.ElevatedButton(
         "Profissionais",
-        on_click=lambda _: tela_profissionais(page)
+        on_click=lambda _: tela_profissionais(page, tela_inicio)
     ),
     ft.ElevatedButton(
         "Consultas",
-        on_click=lambda _: tela_consultas(page)
+        on_click=lambda _: tela_consultas(page, tela_inicio)
     ),
     ft.ElevatedButton(
         "Relatorios",
-        on_click=lambda _: tela_relatorios(page)
+        on_click=lambda _: tela_relatorios(page, tela_inicio)
     ))
