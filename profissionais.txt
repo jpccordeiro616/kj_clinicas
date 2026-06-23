@@ -1,3 +1,2 @@
-Codigo;Nome;Especialidade
 jota,niro,2
 TESTE,SEM,12

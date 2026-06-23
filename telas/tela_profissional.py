@@ -81,9 +81,10 @@ def tela_profissionais(page: ft.Page, voltar_para):
         ft.Row([
             ft.ElevatedButton("Buscar", on_click=buscar),
             ft.ElevatedButton("Listar", on_click=listar),
+            ft.ElevatedButton("Voltar", on_click=lambda e: voltar_para(page))
         ]),
 
         resultado,
 
-        ft.ElevatedButton("Voltar", on_click=lambda e: voltar_para(page))
+        
     )
