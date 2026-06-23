@@ -46,7 +46,7 @@ def tela_profissionais(page: ft.Page, voltar_para):
         if prof:
             resultado.controls.append(
                 ft.Text(
-                    f"{prof['nome']} | {prof['especialidade']} | {prof['codigo']}"
+                    f"Nome: {prof['nome']} | Especialidade: {prof['especialidade']} | Código: {prof['codigo']}"
                 )
             )
         else:
@@ -60,7 +60,7 @@ def tela_profissionais(page: ft.Page, voltar_para):
         for p in listar_profissionais():
             resultado.controls.append(
                 ft.Text(
-                    f"{p['nome']} | {p['especialidade']} | {p['codigo']}"
+                    f"Nome: {p['nome']} | Especialidade: {p['especialidade']} | Código: {p['codigo']}"
                 )
             )
 

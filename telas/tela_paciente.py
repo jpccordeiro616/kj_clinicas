@@ -72,7 +72,7 @@ def tela_pacientes(page: ft.Page, voltar_para):
         page.update()
 
     page.add(
-        ft.Text("Tela de Pacientes", size=24, weight=ft.FontWeight.BOLD),
+        ft.Text("PACIENTES", size=24, weight=ft.FontWeight.BOLD),
         nome,
         cpf,
         telefone,
@@ -85,18 +85,11 @@ def tela_pacientes(page: ft.Page, voltar_para):
             on_click=salvar
         ),
         cpf_busca,
-        ft.ElevatedButton(
-            "Buscar",
-            on_click=buscar
-        ),
-        ft.ElevatedButton(
-            "Listar Todos",
-            on_click=listar
-        ),
-        ft.ElevatedButton(
-            "Voltar",
-            on_click=voltar
-        ),
+        ft.Row([
+            ft.ElevatedButton("Buscar", on_click=buscar),
+            ft.ElevatedButton("Listar", on_click=listar),
+            ft.ElevatedButton("Voltar", on_click=voltar)
+        ]),
         resultado
 
     )
