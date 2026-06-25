@@ -30,11 +30,23 @@ def tela_pacientes(page: ft.Page, voltar_para):
         else:
             resultado.controls.clear()
             resultado.controls.append(ft.Text("CEP não encontrado."))
+
         page.update()
+
     cep.on_blur = preencher_endereco
+    
     def salvar(e):
-        cadastro = cadastrar_paciente(nome.value, cpf.value, telefone.value, cep.value, rua.value, bairro.value, cidade.value)
+        cadastro = cadastrar_paciente(
+            nome.value,
+            cpf.value,
+            telefone.value,
+            cep.value,
+            rua.value,
+            bairro.value,
+            cidade.value)
+        
         resultado.controls.clear()
+
         if cadastro:
             resultado.controls.append(ft.Text("Paciente cadastrado com sucesso!"))
             nome.value = ""
@@ -72,7 +84,7 @@ def tela_pacientes(page: ft.Page, voltar_para):
         page.update()
 
     page.add(
-        ft.Text("Tela de Pacientes", size=24, weight=ft.FontWeight.BOLD),
+        ft.Text("PACIENTES", size=24, weight=ft.FontWeight.BOLD),
         nome,
         cpf,
         telefone,
@@ -84,19 +96,13 @@ def tela_pacientes(page: ft.Page, voltar_para):
             "Cadastrar",
             on_click=salvar
         ),
+        ft.Divider(),
         cpf_busca,
-        ft.ElevatedButton(
-            "Buscar",
-            on_click=buscar
-        ),
-        ft.ElevatedButton(
-            "Listar Todos",
-            on_click=listar
-        ),
-        ft.ElevatedButton(
-            "Voltar",
-            on_click=voltar
-        ),
+        ft.Row([
+            ft.ElevatedButton("Buscar", on_click=buscar),
+            ft.ElevatedButton("Listar", on_click=listar),
+            ft.ElevatedButton("Voltar", on_click=voltar)
+        ]),
         resultado
 
     )
