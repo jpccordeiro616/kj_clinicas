@@ -30,11 +30,9 @@ def tela_pacientes(page: ft.Page, voltar_para):
         else:
             resultado.controls.clear()
             resultado.controls.append(ft.Text("CEP não encontrado."))
-
+            
         page.update()
-
     cep.on_blur = preencher_endereco
-    
     def salvar(e):
         cadastro = cadastrar_paciente(
             nome.value,
