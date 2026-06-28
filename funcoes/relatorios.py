@@ -6,7 +6,7 @@ def limpar(resultado):
     resultado.controls.clear()
 
 
-# RELATÓRIO 1
+# Consultas por profissional
 def mostrar_profissionais(resultado):
     limpar(resultado)
 
@@ -36,7 +36,7 @@ def mostrar_profissionais(resultado):
     resultado.update()
 
 
-# RELATÓRIO 2
+# Consultas por tipo
 def mostrar_tipos(resultado):
     limpar(resultado)
 
@@ -68,7 +68,7 @@ def mostrar_tipos(resultado):
     resultado.update()
 
 
-# RELATÓRIO 3
+# Faturamento previsto
 def mostrar_faturamento(resultado):
     limpar(resultado)
 
@@ -92,7 +92,7 @@ def mostrar_faturamento(resultado):
     resultado.update()
 
 
-# RELATÓRIO 4
+# Consultas por bairro
 def mostrar_bairros(resultado):
     limpar(resultado)
 
@@ -122,7 +122,7 @@ def mostrar_bairros(resultado):
     resultado.update()
 
 
-# RELATÓRIO 5
+# Horários ocupados e livres
 def mostrar_horarios(resultado):
     limpar(resultado)
 
